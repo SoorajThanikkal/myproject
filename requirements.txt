@@ -76,7 +76,7 @@ pyprel==2018.9.14.1501
 pytg==0.4.10
 python-dateutil==2.9.0.post0
 python-magic==0.4.27
-# python-sentinel==2019.5.28.1348
+python-sentinel==2019.5.28.1348
 pyttsx3==2.90
 pytz==2024.1
 PyYAML==6.0.1
@@ -99,6 +99,7 @@ tensorflow-intel
 tensorflow-io-gcs-filesystem==0.31.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
+tonescale==2018.2.6.1919
 traitlets==5.14.3
 typing_extensions==4.11.0
 tzdata==2024.1
