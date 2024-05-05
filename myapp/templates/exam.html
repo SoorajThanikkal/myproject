@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        pre {
+            background-color: #e74747;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exam Page</h1>
+    </header>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Start Exam Process</button>
+    </form>
+    <h2>Output:</h2>
+    {% if stdout %}
+        <pre>{{ stdout|linebreaksbr }}</pre>
+    {% endif %}
+</body>
+<script>
+    // Get all pre elements
+    var pres = document.querySelectorAll('pre');
+    
+    // Hide each pre element after 3 seconds
+    pres.forEach(function(pre) {
+        setTimeout(function() {
+            pre.style.display = 'none';
+        }, 5000);
+    });
+</script>
+</html>

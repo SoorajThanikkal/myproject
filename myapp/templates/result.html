@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+</head>
+<body>
+    <h1>Result Page</h1>
+
+  {% for im in  content %}<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Exam</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f0f0f0;
+              margin: 0;
+              padding: 0;
+          }
+          h1 {
+              text-align: center;
+              color: #333;
+          }
+          pre {
+              background-color: #fff;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              margin: 10px;
+              overflow-x: auto;
+          }
+      </style>
+  </head>
+  <body>
+      <h1>Result Page</h1>
+  
+      {% for im in content %}
+          <pre>{{ im }}</pre>
+      {% endfor %}
+  </body>
+  </html>
+  
+        <pre>{{im}}</pre>
+    {% endfor %}
+</body>
+</html>

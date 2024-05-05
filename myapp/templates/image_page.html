@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Page</title>
+    <style>
+      .captured-image {
+          width: 300px;
+          height: auto;
+      }
+  </style>
+</head>
+<body>
+
+
+
+  <ul>
+    <li><a href="/home/">Home</a></li>
+    <li><a href="/profile/">Profile</a></li>
+    <li><a href="/feedback/">Feedback</a></li>
+    <li><a href="/capture/">Live Cam</a></li>
+    <li style="float:right"><a class="active" href="/save_image/">Result</a></li>
+  </ul> 
+
+
+
+<center>
+    <h2>Result of the image</h2>
+    <img src="{{ image_data }}" alt="Captured Image"  align="left">
+    <center>
+      <img class="captured-image"src="{{ image.image.url }}" alt="Captured Image">
+  
+      <b>Result: {{ result }}</b>
+      {% comment %} <TABLE border="1"> <TR> <TH>Item</TH> <TH>Category</TH> </TR> <TR> <TD>{{item}}</TD> <TD>{{category}}</TD> </TR> </TABLE> {% endcomment %}
+      <style>
+
+
+        
+{% comment %} 
+        img {
+          border: 5px solid transparent;
+          padding: 0px;
+          background-color: white;
+          box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border-radius: 15px;
+        } {% endcomment %}
+        img {
+          border-radius: 20px;
+        }
+
+        body {
+          background: rgb(238,174,202);
+          background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+         }
+
+
+        
+
+        li {
+          display: inline;
+        }
+        li {
+          float: left;
+        }
+        
+        a {
+          display: block;
+          padding: 8px;
+          background-color: #dddddd;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+          width: max-content;
+          border-radius: 15px;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+          background-color: #111;
+        }
+        .active {
+          background-color: #04AA6D;
+        }
+        li {
+          border-right: 1px solid #bbb;
+        }
+        
+        li:last-child {
+          border-right: none;
+        }
+
+
+
+        table {
+          border-collapse: collapse;
+          width: 50%;
+        }
+      
+        th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+        }
+      
+        th {
+          background-color: #f2f2f2;
+        }
+      
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+      
+        tr:hover {
+          background-color: #ddd;
+        }
+      </style>
+      
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Category</th>
+        </tr>
+        <tr>
+          <td><a>{{item}}<a/></td>
+          <td>{{category}}</td>
+        </tr>
+      </table>
+</body>
+</html>
+
