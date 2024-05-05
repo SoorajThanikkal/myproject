@@ -8,7 +8,7 @@ setup(
     description='Detection',
     packages=find_packages(),
     install_requires=[
-        'scikit-learn==1.4.2'
+        'scikit-learn==0.0.post12'
         
     ],
 )
